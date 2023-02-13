@@ -511,6 +511,10 @@ button{
     cursor: default;
     transition: color var(--timing-function);
 }
+.social-list-menu.social-list{
+    gap: 56px;
+    justify-content: start;
+}
 /*==========/HEADER==========*/
 /*==========HERO==========*/
 
