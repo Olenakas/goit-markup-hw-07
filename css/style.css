@@ -75,6 +75,12 @@ button{
         width: 1158px;
     }    
 }
+@media screen and (max-width: 479px) {
+    .container{
+        
+        width: 240px;
+      }
+    }
 .section{
     padding-top: 96px;
     padding-bottom: 96px;
@@ -111,6 +117,12 @@ button{
         margin-bottom: 48px; 
     }   
 }
+@media screen and (max-width: 479px) {
+    .title{
+        width: 210px;
+        font-size: 23px;
+      }
+    }
 .heading{
     font-size: 36px;
     line-height: 1.11;
@@ -480,10 +492,10 @@ button{
 .contact-menu-link:focus{
     color: var(--accent-color-hover);
 }  
-@media screen and (max-width: 418px) {
+@media screen and (max-width: 479px) {
     .contact-menu-link {
-        font-size: 30px;
-        line-height: 1.13;}
+        font-size: 25px;
+      }
     }      
 .contact-email-menu-link{
     font-weight: 500;
@@ -495,9 +507,16 @@ button{
     transition: color var(--timing-function);
 }
 .social-list-menu{
+    display: flex;
     gap: 56px;
     justify-content: start;
 }
+@media screen and (max-width:479px){
+    .social-list-menu{    
+        gap: 30px;        
+    }  
+}
+
 /*==========/HEADER==========*/
 /*==========HERO==========*/
 .hero{
@@ -507,11 +526,60 @@ button{
     background: #2E2F42;
     padding-top: 112px;
     padding-bottom: 112px;
-    background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),  url("../images/hero/people-office.jpg");
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),  url("../images/hero/people-office-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+@media screen and (min-device-pixel-ratio: 2) and (max-width:767px),
+  screen and (min-resolution: 192dpi) and (max-width:767px),
+  screen and (min-resolution: 2dppx) and (max-width:767px){
+  .hero {
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+     url('../images/hero/people-office-mobile@2x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+      url('../images/hero/people-office-tablet.jpg');
+  }
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
+  screen and (min-resolution: 192dpi) and (min-width:768px),
+  screen and (min-resolution: 2dppx) and (min-width:768px) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+      url('../images/hero/people-office-tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .hero {
+      background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+        url('../images/hero/people-office-desktop.jpg');
+    }
+}
+  
+    @media screen and (min-device-pixel-ratio: 2) and (min-width:1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+      .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('../images/hero/people-office-desktop@2x.jpg');
+      }
+    }
+
+
+
+
+
+
+
+
+  
 @media screen and (min-width: 768px){
     .hero{ 
         padding-top: 112px;
@@ -695,7 +763,7 @@ button{
 .footer-wrap{
     display: flex;
     flex-wrap: wrap;
-   justify-content: center;
+    justify-content: center;
     row-gap: 72px;
 }
 @media screen and (min-width:768px){
@@ -703,6 +771,12 @@ button{
         justify-content: start;
     }
 }
+@media screen and (min-width:1200px){
+    .footer-wrap{
+        flex-wrap: nowrap;
+    }
+}
+
 .logo-footer{
     text-align: center;
 }
@@ -767,17 +841,23 @@ button{
     display: flex;
     align-items: center;
     position: relative;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    gap: 16px; 
 }
-.footer-field{
-    margin-bottom: 16px;
+@media screen and (min-width:1200px){
+    .footer-form{
+        flex-wrap: nowrap;
+    }
 }
+
 @media screen and (min-width:768px){
     .footer-field{
         margin-bottom: 0px;
         margin-right: 24px;
     }
 }
+
+
 .footer-input{
     width: 398px;
     height: 40px;
@@ -793,10 +873,14 @@ button{
 .footer-input:focus{   
     border-color: var(--accent-color);
 }
-
 @media screen and (min-width:768px){
     .footer-input{
         width: 264px;
+    }
+}
+@media screen and (max-width:479px){
+    .footer-input{
+        width: 230px;
     }
 }
 /*==========/FOOTER==========*/
@@ -867,7 +951,7 @@ button{
     left: 0;
     z-index: 100;
     width: 100%;
-    height: 100%;
+    height: 100%;   
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -878,18 +962,30 @@ button{
 }
 .modal{
     position: absolute;
-    top: 50%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
-   
+    width: 392px;
+    height: 586px;   
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform var(--timing-function);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
+    margin-top: 96px;
 }
-
+@media screen and (min-width:768px){
+    .modal{
+        width: 408px;       
+        padding: 72px 24px 24px 24px;      
+    }
+}
+@media screen and (min-width:1200px){
+    .modal{        
+        height: 584px;
+        margin-top: 80px;    
+    }
+}
 /*==========MODAL WINDOV/==========*/
 /*==========MODAL FORM/==========*/
 .form-title{    
@@ -931,7 +1027,6 @@ button{
     letter-spacing: 0.02em;
     color: var(--secondary-text-color-theme-light);
     transition: border-color var(--timing-function); 
-
 }
 .modal-form-input-icon{
     position: absolute;
@@ -947,7 +1042,6 @@ button{
 .modal-form-input:focus + .modal-form-input-icon{
     fill: var(--accent-color);
 }
-
 .modal-form-message{
     resize: none;
     width: 100%;
@@ -960,7 +1054,6 @@ button{
     border-radius: 4px;
     transition: border-color var(--timing-function);
 }
-
 .modal-form-message::placeholder{
     font-size: 12px;
     line-height: 1.33;
@@ -971,7 +1064,6 @@ button{
     outline: none;
     border-color: var(--accent-color);
 }
-
 .modal-form-chek-desc::before{ 
     display: block; 
     width: 16px;
@@ -991,8 +1083,7 @@ button{
     background-size: cover;
 }
 .modal-form-chek:focus + .modal-form-chek-desc::before{
-   box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 2px #000000;
-  
+   box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 2px #000000;  
 }
 .modal-form-chek-desc{
     display: flex;
@@ -1003,8 +1094,6 @@ button{
     color: #757575;
     margin-bottom: 24px;
 }
-
-
 .user-policy-link{
     color: var(--accent-color);
 }
