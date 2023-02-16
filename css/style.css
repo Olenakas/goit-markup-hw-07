@@ -635,7 +635,7 @@ button{
     }
 }
  @media (min-width: 768px) and (max-width: 1199px){
-    .employees-card-four:not(:nth-last-child(2)){
+    .employees-card-four:not(:nth-last-child(-n+2)){
         margin-bottom: 64px;
     }
     .employees-card-four:nth-child(2n+1){
