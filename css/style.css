@@ -147,6 +147,13 @@ button{
 .subtitle-link{
     color: var(--primary-text-color-theme-light);
 }
+.subtitle-portfolio{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;  
+}
 .subtitle-footer{
     text-align: center;
     font-weight: 500;
@@ -286,9 +293,6 @@ button{
     flex-wrap: wrap;  
     justify-content: center;
 }
-.employees-card-filtres:not(:nth-child(5n)){
-    margin-right: 24px;
-}
 /*==========EMPLOYEES==========*/
 /*==========HEADER==========*/
 .page-header{
@@ -306,18 +310,12 @@ button{
         padding-bottom: 27px;       
     }
 }
-
-
 .page-header-container{
     display: flex;
     justify-content: space-between;
-
 }
-
-
 .page-nav{
     display: flex;
-
 }
 .logo-header{
     margin-right: 0px;
@@ -332,7 +330,6 @@ button{
         margin-right: 76px;
     }  
 }
-
 .menu{
     display: flex;
 }
@@ -383,7 +380,6 @@ button{
 .menu-link:focus::after{
     opacity: 1;   
 }
-
 .contact{
     display: none;
 }
@@ -393,18 +389,14 @@ button{
         margin-left: auto;
         flex-direction: column;
         gap: 4px;
-
     }     
 }
 @media screen and (min-width:1200px) {
     .contact{
         flex-direction: row;
         gap: 40px;
-
     }     
 }
-
-
 .contact-link{
     font-weight: 400;
     font-size: 16px;
@@ -516,7 +508,6 @@ button{
         gap: 30px;        
     }  
 }
-
 /*==========/HEADER==========*/
 /*==========HERO==========*/
 .hero{
@@ -539,15 +530,12 @@ button{
      url('../images/hero/people-office-mobile@2x.jpg');
   }
 }
-
-
 @media screen and (min-width: 768px) {
   .hero {
     background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
       url('../images/hero/people-office-tablet.jpg');
+    }
   }
-  }
-
   @media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
   screen and (min-resolution: 192dpi) and (min-width:768px),
   screen and (min-resolution: 2dppx) and (min-width:768px) {
@@ -556,30 +544,19 @@ button{
       url('../images/hero/people-office-tablet@2x.jpg');
     }
   }
-
   @media screen and (min-width: 1200px) {
     .hero {
       background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
         url('../images/hero/people-office-desktop.jpg');
     }
-}
-  
+}  
     @media screen and (min-device-pixel-ratio: 2) and (min-width:1200px),
     screen and (min-resolution: 192dpi) and (min-width: 1200px),
     screen and (min-resolution: 2dppx) and (min-width: 1200px) {
       .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('../images/hero/people-office-desktop@2x.jpg');
       }
-    }
-
-
-
-
-
-
-
-
-  
+    }  
 @media screen and (min-width: 768px){
     .hero{ 
         padding-top: 112px;
@@ -594,30 +571,18 @@ button{
 }
 /*==========/HERO SECTION==========*/
 /*==========ADVANTADES==========*/
-
-.employees-card-advantades:not(:last-child){
-    margin-bottom: 72px;
-}
-
-@media screen and (min-width: 768px) {
-    .employees-card-advantades:nth-child(2n+1){
-        margin-right: 24px;}
-    .employees-card-advantades{
-        margin-bottom: 72px;}    
-}
-@media screen and (min-width:1200px) {
-    .employees-card-advantades:not(:nth-child(4n)){
-        margin-right: 24px;}
-    .employees-card-advantades:not(:last-child){
-        margin-bottom: 0px;}   
-}
+.employees-advantades{
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+    gap: 72px 24px;
+} 
 .employees-card-advantades{
     width: 396px; 
 }
 .thumb{
     display: none;
 } 
-
 @media screen and (min-width:768px) {
     .employees-card-advantades{
         width: 356px; 
@@ -659,29 +624,29 @@ button{
 }
 /*==========/SERVISES========*/
 /*==========TEAM==========*/
-.employees-card-four{
-    
+.employees-card-four{    
      background: var(--background-color-body-theme-light);
      box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
      border-radius: 0px 0px 4px 4px;
  }
-.employees-card-four:not(:last-child){
-    margin-bottom: 72px;
-}
-@media screen and (min-width: 768px) {
+ @media screen and (max-width: 767px){
+    .employees-card-four:not(:last-child){
+        margin-bottom: 72px;
+    }
+ @media (min-width: 768px) and (max-width: 1099px){
+    .employees-card-four:not(:nth-last-child(2)){
+        margin-bottom: 64px;
+    }
     .employees-card-four:nth-child(2n+1){
         margin-right: 24px;}
-    .employees-card-four,
-    .employees-card-four:not(:last-child){
-        margin-bottom: 64px;}    
-}
+ }
+} 
 @media screen and (min-width:1200px) {
-    .employees-card-four:not(:nth-child(4n)){
-        margin-right: 24px;}
-    .employees-card-four,
     .employees-card-four:not(:last-child){
-        margin-bottom: 0px;}   
+        margin-right: 24px;} 
 }
+
+
 .employees-card-content-wraper{
     padding-top: 32px;
     padding-bottom: 32px;   
@@ -776,7 +741,6 @@ button{
         flex-wrap: nowrap;
     }
 }
-
 .logo-footer{
     text-align: center;
 }
@@ -849,15 +813,12 @@ button{
         flex-wrap: nowrap;
     }
 }
-
 @media screen and (min-width:768px){
     .footer-field{
         margin-bottom: 0px;
         margin-right: 24px;
     }
 }
-
-
 .footer-input{
     width: 398px;
     height: 40px;
@@ -889,6 +850,12 @@ button{
     padding-top: 96px;
     padding-bottom: 120px;
 }
+.portfolio-card{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;     
+        gap: 48px 24px;
+      }
 .portfolio-card-link{ 
     display: block;
     width: 100%;
@@ -922,8 +889,17 @@ button{
 }
 /*==========/PORTFOLIO=======*/
 /*==========PORTFOLIO FILTRES=======*/
-.filtres{   
-    margin-bottom: 72px; 
+.filtres{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;   
+    margin-bottom: 72px;
+    gap: 16px 24px; 
+}
+@media screen and (min-width:768px){
+    .filtres{
+        justify-content: center;    
+    }
 }
 .filtres-btn{
     color: var(--accent-color);
