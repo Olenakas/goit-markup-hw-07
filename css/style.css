@@ -116,10 +116,11 @@ button{
         margin-bottom: 48px; 
     }   
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 340px){
     .title{
-        width: 210px;
-        font-size: 23px;
+        width: 100%;
+        font-size: 32px;
+        
       }
     }
 .heading{
@@ -142,7 +143,12 @@ button{
         font-size: 20px;
         line-height: 1.2;
     }
-} 
+}
+@media screen and (max-width:767px){
+    .subtitle-advantades{
+        text-align: center;
+    }
+}
 .subtitle-link{
     color: var(--primary-text-color-theme-light);
 }
@@ -226,6 +232,11 @@ button{
 .modal-btn-footer:hover,
 .modal-btn-footer:focus{
     background-color: var(--accent-color-hover);  
+}
+@media screen and (max-width:441px){
+    .modal-btn-footer{
+        justify-content: center;
+    }
 }
 .modal-close-btn{
     position: absolute;
@@ -689,6 +700,26 @@ button{
     flex-wrap: wrap;
     gap: 72px 16px;
 }
+@media (min-width: 768px) and (max-width: 1199px){
+    .customers-list{
+    
+        gap: 72px 24px;
+
+        margin-left: 92px;
+        margin-right: 92px;
+        
+    }
+}
+@media (min-width: 1200px) {
+    .customers-list{
+    
+        gap: 72px 24px;
+
+    
+        
+    }
+}
+
 .customers-list-link{
     display: flex;
     justify-content: center;
@@ -705,7 +736,7 @@ button{
     border: 1px solid var(--accent-color-hover);
     fill: #404BBF;
 }
-@media screen and (min-width:1200px){
+@media screen and (min-width: 768px){
     .customers-list-link{
         width: 168px;
         height: 88px; 
@@ -739,7 +770,7 @@ button{
 }
 @media (min-width: 768px) and (max-width: 1199px){
     .footer-wrap{    
-        padding-left: 92px;       
+        padding-left: 107px;       
     }    
 }
 @media screen and (min-width:1200px){
@@ -814,15 +845,19 @@ button{
     flex-wrap: wrap;
     gap: 16px; 
 }
-@media screen and (min-width:1200px){
-    .footer-form{
-        flex-wrap: nowrap;
+@media screen and (min-width:768px){
+    .footer-form{       
+        gap: 24px;
     }
 }
-@media screen and (min-width:768px){
-    .footer-field{
-        margin-bottom: 0px;
-        margin-right: 24px;
+@media screen and (min-width:1200px){
+    .footer-form{
+        flex-wrap: nowrap;    
+    }
+}
+@media screen and (max-width:479px){
+    .footer-form{
+        justify-content: center;
     }
 }
 .footer-input{
@@ -845,7 +880,7 @@ button{
         width: 264px;
     }
 }
-@media screen and (max-width:479px){
+@media screen and (max-width:442px){
     .footer-input{
         width: 230px;
     }
