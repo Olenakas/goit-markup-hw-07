@@ -921,7 +921,7 @@ button{
     border: 1px solid #E7E9FC;   
 }
 /*==========/PORTFOLIO FILTRES========*/
-/*==========MODAL WINDOV/==========*/
+/*==========MODAL WINDOW/==========*/
 .backdrop{
     position: fixed;
     top: 0;
@@ -951,6 +951,11 @@ button{
     padding: 72px 16px 24px 16px;
     margin-top: 96px;
 }
+@media screen and (max-width: 427px) {
+    .modal {
+      width: calc(100% - 32px);
+    }
+  }
 @media screen and (min-width:768px){
     .modal{
         width: 408px;       
@@ -963,7 +968,7 @@ button{
         margin-top: 80px;    
     }
 }
-/*==========MODAL WINDOV/==========*/
+/*==========MODAL WINDOW/==========*/
 /*==========MODAL FORM/==========*/
 .form-title{    
     margin-bottom: 16px;
