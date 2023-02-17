@@ -730,17 +730,21 @@ button{
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 72px;
-    width: 552px;
    
 }
 @media screen and (min-width:768px){
     .footer-wrap{
-        justify-content: start;
+        justify-content: start;              
     }
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    .footer-wrap{    
+        padding-left: 92px;       
+    }    
 }
 @media screen and (min-width:1200px){
     .footer-wrap{
-        flex-wrap: nowrap;
+        flex-wrap: nowrap;     
     }
 }
 .logo-footer{
@@ -1033,6 +1037,7 @@ button{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color-theme-light);
+    border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color var(--timing-function);
 }
