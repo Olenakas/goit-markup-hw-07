@@ -76,9 +76,8 @@ button{
     }    
 }
 @media screen and (max-width: 479px) {
-    .container{
-        
-        width: 240px;
+    .container{        
+        width: 100%;
       }
     }
 .section{
@@ -147,7 +146,7 @@ button{
 .subtitle-link{
     color: var(--primary-text-color-theme-light);
 }
-.subtitle-portfolio{
+.subtitle-cards{
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -731,6 +730,8 @@ button{
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 72px;
+    width: 552px;
+   
 }
 @media screen and (min-width:768px){
     .footer-wrap{
@@ -942,8 +943,7 @@ button{
     top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 392px;
-    height: 586px;   
+    width: 392px;      
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
